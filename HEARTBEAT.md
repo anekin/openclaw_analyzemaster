@@ -1,5 +1,35 @@
-# HEARTBEAT.md
+# HEARTBEAT.md - 每日任务检查清单
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+## 执行时间
+每天 21:30（日报发送前30分钟）
 
-# Add tasks below when you want the agent to check something periodically.
+## 任务列表
+
+### 1. 检查并创建当日记忆文件
+- 检查 memory/YYYY-MM-DD.md 是否存在
+- 如不存在，创建当日记忆文件模板
+- 记录当日已完成的任务
+
+### 2. 日报准备检查
+- 确认记忆文件内容不为空
+- 确认日报脚本可正常执行
+
+### 3. 系统健康检查（每周一次）
+- 检查磁盘空间
+- 检查OpenClaw服务状态
+
+## 记忆文件模板
+```markdown
+# YYYY-MM-DD 工作记录
+
+## 今日完成任务
+1. 
+2. 
+3. 
+
+## 待办事项
+- 
+
+## 备注
+- 
+```

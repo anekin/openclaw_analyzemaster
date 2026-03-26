@@ -1,0 +1,101 @@
+{
+  "holdings": [
+    {
+      "code": "510050.SH",
+      "name": "上证50ETF",
+      "shares": 8100,
+      "cost": 2.382,
+      "market": "A-share",
+      "category": "broad-based"
+    },
+    {
+      "code": "510300.SH",
+      "name": "沪深300ETF",
+      "shares": 5600,
+      "cost": 2.728,
+      "market": "A-share",
+      "category": "broad-based"
+    },
+    {
+      "code": "159915.SZ",
+      "name": "创业板ETF",
+      "shares": 9100,
+      "cost": 3.556,
+      "market": "A-share",
+      "category": "broad-based"
+    },
+    {
+      "code": "588000.SH",
+      "name": "科创50ETF",
+      "shares": 16000,
+      "cost": 1.430,
+      "market": "A-share",
+      "category": "broad-based"
+    },
+    {
+      "code": "513100.SH",
+      "name": "纳斯达克ETF",
+      "shares": 8500,
+      "cost": 2.276,
+      "market": "US",
+      "category": "broad-based"
+    },
+    {
+      "code": "513500.SH",
+      "name": "标普500ETF",
+      "shares": 7500,
+      "cost": 2.410,
+      "market": "US",
+      "category": "broad-based"
+    },
+    {
+      "code": "516160.SH",
+      "name": "新能源ETF",
+      "shares": 2000,
+      "cost": 3.051,
+      "market": "A-share",
+      "category": "sector"
+    },
+    {
+      "code": "159995.SZ",
+      "name": "芯片ETF华夏",
+      "shares": 15000,
+      "cost": 1.763,
+      "market": "A-share",
+      "category": "sector"
+    },
+    {
+      "code": "159227.SZ",
+      "name": "航空航天ETF",
+      "shares": 6500,
+      "cost": 1.510,
+      "market": "A-share",
+      "category": "sector"
+    },
+    {
+      "code": "159902.SZ",
+      "name": "中小100ETF",
+      "shares": 2500,
+      "cost": 3.894,
+      "market": "A-share",
+      "category": "broad-based"
+    }
+  ],
+  "analysis_config": {
+    "long_term_days": 243,
+    "short_term_days": 20,
+    "data_sources": {
+      "primary": "qveris",
+      "secondary": "local",
+      "backup": "akshare"
+    },
+    "report_time": "08:30",
+    "data_collection_time": "08:00"
+  },
+  "strategy_weights": {
+    "bollinger": 0.4,
+    "kdj": 0.3,
+    "buy_hold": 0.2,
+    "cash": 0.1
+  }
+}
