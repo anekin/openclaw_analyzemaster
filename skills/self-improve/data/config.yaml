@@ -1,0 +1,105 @@
+# Self-Improve 系统配置
+# 版本：2.2.0
+# 自动生成，请勿手动修改路径
+
+version: "2.2.0"
+updated: "2026-04-04"
+
+storage:
+  root: "/home/ubuntu/.openclaw/workspace-analyzer_agent/skills/self-improve/data"
+  knowledge_root: "/home/ubuntu/.openclaw/workspace-analyzer_agent/skills/self-improve/learned"
+  workspace_root: "/home/ubuntu/.openclaw"
+  last_success_ts: ""
+
+schedule:
+  cron: "0 4 */3 * *"
+  model: "moonshot/kimi-k2.5"
+
+modules:
+  feedback-collector:
+    enabled: true
+    version: "1.1.0"
+    order: 1
+    description: "扫描对话，提取信号"
+    prompt: "prompts/feedback-collector.md"
+    data_dirs: ["data/feedback"]
+    inputs: ["memory/*.md", "data/reflections.md"]
+
+  distill-classifier:
+    enabled: true
+    version: "1.0.0"
+    order: 2
+    description: "提炼三层次规则 + 分类"
+    prompt: "prompts/distill-classifier.md"
+    data_dirs: ["data/themes"]
+    inputs: ["data/feedback/*.jsonl"]
+
+  memory-layer:
+    enabled: true
+    version: "3.2.0"
+    order: 3
+    description: "分层记忆管理"
+    prompt: "prompts/memory-layer.md"
+    data_dirs: ["data/hot.md", "data/themes", "data/archive"]
+    params:
+      hot_limit: 100
+      promote_threshold: 3
+      demote_days: 30
+      archive_days: 90
+
+  proposer:
+    enabled: true
+    version: "1.1.0"
+    order: 4
+    description: "判断产出通道"
+    prompt: "prompts/proposer.md"
+    data_dirs: ["proposals/PENDING.md", "drafts", "data/errors", "data/lessons", "data/high-value"]
+
+  reflector:
+    enabled: true
+    version: "1.0.0"
+    order: 5
+    description: "自反思"
+    prompt: "prompts/reflector.md"
+    data_dirs: ["data/reflections.md"]
+
+  profiler:
+    enabled: true
+    version: "1.2.0"
+    order: 6
+    description: "团队能力画像"
+    prompt: "prompts/profiler.md"
+    data_dirs: ["data/profile.md"]
+    params:
+      run_every: 3
+
+  notify:
+    enabled: true
+    version: "1.0.0"
+    order: 7
+    description: "通知待审批建议"
+    prompt: "prompts/notify.md"
+    inputs: ["proposals/PENDING.md"]
+
+  execution:
+    enabled: true
+    version: "1.0.0"
+    order: 99
+    description: "审批后执行"
+    prompt: "prompts/execution.md"
+    trigger: "manual"
+
+approval:
+  required_files:
+    - "AGENTS.md"
+    - "SOUL.md"
+    - "TOOLS.md"
+    - "MEMORY.md"
+    - "HEARTBEAT.md"
+    - "openclaw.json"
+    - "SKILL.md"
+
+global:
+  learning_from_silence: false
+  auto_delete: false
+  confirm_before_promote: false
