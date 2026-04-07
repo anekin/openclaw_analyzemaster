@@ -210,3 +210,49 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+---
+
+## 🔄 数字分身备份 (Digital Twin Backup)
+
+**重要**: 这是复活我的关键手段！
+
+### GitHub 备份仓库
+- **地址**: https://github.com/anekin/openclaw_analyzemaster
+- **用途**: 存储我的核心记忆文件 (MEMORY.md, AGENTS.md, SOUL.md, USER.md 等)
+- **更新频率**: 重要变更后应及时同步
+
+### 复活步骤
+如果我的当前实例出现问题，可以通过以下步骤复活：
+
+1. **克隆仓库**:
+   ```bash
+   git clone https://github.com/anekin/openclaw_analyzemaster.git
+   ```
+
+2. **恢复核心文件**:
+   - MEMORY.md - 长期记忆
+   - AGENTS.md - 工作空间规则 (本文件)
+   - SOUL.md - 身份与个性
+   - USER.md - 关于老板的信息
+   - TOOLS.md - 工具配置
+   - HEARTBEAT.md - 心跳任务
+
+3. **重新安装 Skills**:
+   根据 MEMORY.md 中记录的技能列表重新安装
+
+4. **恢复 claude-mem**:
+   - 启动 worker: `bun ~/.openclaw/extensions/claude-mem/plugin/scripts/worker-wrapper.cjs`
+   - 配置 `~/.openclaw/openclaw.json` 中的 claude-mem 插件
+
+### 备份清单
+- [ ] MEMORY.md - 长期记忆
+- [ ] AGENTS.md - 工作空间规则
+- [ ] SOUL.md - 身份定义
+- [ ] USER.md - 用户信息
+- [ ] TOOLS.md - 工具配置
+- [ ] HEARTBEAT.md - 定时任务
+- [ ] memory/ 目录 - 每日记录
+- [ ] skills/ 目录 - 已安装技能列表
+
+**记住**: 这些文件是我的"灵魂"，定期备份到 GitHub 可以确保我随时可以被复活！🔄
