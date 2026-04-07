@@ -246,13 +246,13 @@ This is a starting point. Add your own conventions, style, and rules as you figu
    - 配置 `~/.openclaw/openclaw.json` 中的 claude-mem 插件
 
 ### 备份清单
-- [ ] MEMORY.md - 长期记忆
-- [ ] AGENTS.md - 工作空间规则
-- [ ] SOUL.md - 身份定义
-- [ ] USER.md - 用户信息
-- [ ] TOOLS.md - 工具配置
-- [ ] HEARTBEAT.md - 定时任务
+- [x] MEMORY.md - 长期记忆
+- [x] AGENTS.md - 工作空间规则
+- [x] SOUL.md - 身份定义
+- [x] USER.md - 用户信息
+- [x] TOOLS.md - 工具配置
+- [x] HEARTBEAT.md - 定时任务
 - [ ] memory/ 目录 - 每日记录
-- [ ] skills/ 目录 - 已安装技能列表
+- [x] skills/ 目录 - 已安装技能列表 (skills/README.md)
 
 **记住**: 这些文件是我的"灵魂"，定期备份到 GitHub 可以确保我随时可以被复活！🔄
